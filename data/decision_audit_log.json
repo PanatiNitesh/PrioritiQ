@@ -1,0 +1,1886 @@
+[
+  {
+    "event_id": "EVT-0063",
+    "decision_id": "DEC-11599063",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:57:20.686802",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "7930a3e02c810637f88389a77b40eaa53e2a359624deee2b76b7e3e7e38757cd",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-11599063"
+    }
+  },
+  {
+    "event_id": "EVT-0062",
+    "decision_id": "DEC-A910DE1E",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:57:20.617944",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "74ba877bfdd3acaecfef350d5f8da244d1abc5bfb898ed22d0ae7fdc8c696ffa",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-A910DE1E"
+    }
+  },
+  {
+    "event_id": "EVT-0061",
+    "decision_id": "DEC-150F7A0D",
+    "query": "What changed since yesterday?",
+    "timestamp": "2026-09-26T16:46:07.391579",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "7c8a818d1ab09efa8a57ed0ff35fc9cb31db1024d93afab25db83564cd17a5b2",
+    "details": {
+      "query": "What changed since yesterday?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-150F7A0D"
+    }
+  },
+  {
+    "event_id": "EVT-0060",
+    "decision_id": "DEC-6BECE0D1",
+    "query": "What changed since yesterday?",
+    "timestamp": "2026-09-26T16:46:05.836916",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "bb9cadb100dbb841a0ee33f1c674876ffa966d0a2825d1ce66cb0ca58d91a67d",
+    "details": {
+      "query": "What changed since yesterday?",
+      "top_leads": [
+        "LEAD-101",
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "deal_value",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with deal_value weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-6BECE0D1"
+    }
+  },
+  {
+    "event_id": "EVT-0059",
+    "decision_id": "DEC-C45C2441",
+    "query": "What changed since yesterday?",
+    "timestamp": "2026-09-26T16:46:04.244228",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "8b6dfc5009f8f85fb778a57aeb2e5b2f0658bc953ca92aa88d2c59fb348b23dc",
+    "details": {
+      "query": "What changed since yesterday?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-110"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "velocity",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with velocity weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-C45C2441"
+    }
+  },
+  {
+    "event_id": "EVT-0058",
+    "decision_id": "DEC-4F42B63C",
+    "query": "What changed since yesterday?",
+    "timestamp": "2026-09-26T16:45:56.866051",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "d00a421189162c14bf2201973d1003c80054497412eac39ae0c88cb94af3ac8c",
+    "details": {
+      "query": "What changed since yesterday?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-4F42B63C"
+    }
+  },
+  {
+    "event_id": "EVT-0057",
+    "decision_id": "DEC-5061B5F2",
+    "query": "Why not NexusPay Solutions?",
+    "timestamp": "2026-09-26T16:45:53.751367",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "c99a3e9825852d5f39f54ffff581d4f458bc7f3ac8f1389375c98336eed0d1a5",
+    "details": {
+      "query": "Why not NexusPay Solutions?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-5061B5F2"
+    }
+  },
+  {
+    "event_id": "EVT-0056",
+    "decision_id": "DEC-A64F9D1F",
+    "query": "Why not NexusPay Solutions?",
+    "timestamp": "2026-09-26T16:45:53.308962",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "5c1067e0c1ab1d4c363a250068fff8d15351067c2a6d6baae9cee4d6f600b04f",
+    "details": {
+      "query": "Why not NexusPay Solutions?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-A64F9D1F"
+    }
+  },
+  {
+    "event_id": "EVT-0055",
+    "decision_id": "DEC-ABEBC57E",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:45:49.925632",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "82ff6d9d19defaeb7048c4c2a4431d1cbdfe99dfa80870fdb48698bc1fa371de",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-ABEBC57E"
+    }
+  },
+  {
+    "event_id": "EVT-0054",
+    "decision_id": "DEC-7A6B968E",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:45:23.702226",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "c66a14762c24b81af27526c233d0c0f7eae95cb780d115536ea6cfec571c88ae",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-7A6B968E"
+    }
+  },
+  {
+    "event_id": "EVT-0053",
+    "decision_id": "DEC-9FB23452",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:45:23.579081",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "b5a68545e2ed3aa651d7607df97c3bc00f7fbbc2b051cd5c033734f58aa98ba1",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-9FB23452"
+    }
+  },
+  {
+    "event_id": "EVT-0052",
+    "decision_id": "DEC-885AF1A0",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:45:00.808234",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "1aac0a69ec784dbb73239a0fcec14231111208e339423e40d9e2c958f8c44737",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-885AF1A0"
+    }
+  },
+  {
+    "event_id": "EVT-0051",
+    "decision_id": "DEC-E075422C",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:45:00.419603",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "075dceba755b00c48753dc9af7d9106729c5b533b6daec7fbf2de4da2526fbd9",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-E075422C"
+    }
+  },
+  {
+    "event_id": "EVT-0050",
+    "decision_id": "DEC-5EE251DE",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:44:59.557505",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "9da52aa7714a0c5a7aa5609f9a267c7a34f4ea80f7d1704f37bb07dfff5e9976",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-101",
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "deal_value",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with deal_value weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-5EE251DE"
+    }
+  },
+  {
+    "event_id": "EVT-0049",
+    "decision_id": "DEC-71B704CD",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:44:58.892742",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "96afcb0b7e3136b64e739c600642ad7d145a4aa639f226f4f3e7d96f91b7e771",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-110"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "velocity",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with velocity weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-71B704CD"
+    }
+  },
+  {
+    "event_id": "EVT-0048",
+    "decision_id": "DEC-379733AB",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:44:58.277212",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "d3ccd87561f7bb88ef5b42a4ee72cc070eb4245b1fc42d592265b487c9c2c21a",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-101",
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "deal_value",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with deal_value weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-379733AB"
+    }
+  },
+  {
+    "event_id": "EVT-0047",
+    "decision_id": "DEC-10B8C97D",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:44:26.431167",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "91a3524ff98c63757b6799499de6ac35180019a8d053e4613fed21ecc2752faa",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-10B8C97D"
+    }
+  },
+  {
+    "event_id": "EVT-0046",
+    "decision_id": "DEC-BA2F99C6",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:44:26.332015",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "934c8f739a5b5b32ba84b563abf6923978edcb6d71d57729dd9e14115ec1613d",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-BA2F99C6"
+    }
+  },
+  {
+    "event_id": "EVT-0045",
+    "decision_id": "DEC-6E6D60E6",
+    "query": "What if my team only has 3 hours?",
+    "timestamp": "2026-09-26T16:29:40.329898",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "49795341cfe430ba97c5456482a0b7c4a5d382dac5fe5b1e98201c7f9862d210",
+    "details": {
+      "query": "What if my team only has 3 hours?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-103"
+      ],
+      "sim_state": {
+        "constrained": true,
+        "time_budget_mins": 180,
+        "allocated_mins": 175,
+        "slack_mins": 5,
+        "total_deal_value": 718000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 5,
+        "excluded_count": 7,
+        "constraint_explanation": "Strict 3.0h (180 mins) team capacity applied. Optimized schedule selects 5 high-impact leads utilizing 175/180 mins ($718,000 pipeline value)."
+      },
+      "decision_id": "DEC-6E6D60E6"
+    }
+  },
+  {
+    "event_id": "EVT-0044",
+    "decision_id": "DEC-11970F07",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:29:11.572394",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "3f13257366a42065423980385136bee723ffe9a050814b9050f91fbcfd661d20",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-11970F07"
+    }
+  },
+  {
+    "event_id": "EVT-0043",
+    "decision_id": "DEC-9EF228DE",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:29:11.408230",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "a0c59619a59d6635665ee0df4b58a363728e3ac69da640e048a9c011c250f7d5",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-9EF228DE"
+    }
+  },
+  {
+    "event_id": "EVT-0042",
+    "decision_id": "DEC-A568D0D7",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:19:49.439405",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "5ff53c20dcb4adac0104cf12453a5885ab6628248890620f0caee9e3ae7e26a9",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-A568D0D7"
+    }
+  },
+  {
+    "event_id": "EVT-0041",
+    "decision_id": "DEC-775FAE9E",
+    "query": "What changed since yesterday?",
+    "timestamp": "2026-09-26T16:19:48.059688",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "fc743febd89fc600bfbde54bd087c76084022625c4465037e1915b5dd0891f9b",
+    "details": {
+      "query": "What changed since yesterday?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-775FAE9E"
+    }
+  },
+  {
+    "event_id": "EVT-0040",
+    "decision_id": "DEC-74F881A0",
+    "query": "Why not Vanguard Logistics?",
+    "timestamp": "2026-09-26T16:19:47.103725",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "6b1d8c23004cd202b85530bc36d5ccb69756bcff92471ae289f2aa98ce4ff56d",
+    "details": {
+      "query": "Why not Vanguard Logistics?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-74F881A0"
+    }
+  },
+  {
+    "event_id": "EVT-0039",
+    "decision_id": "DEC-FD1887B2",
+    "query": "What if I prioritize deal value?",
+    "timestamp": "2026-09-26T16:19:46.220594",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "5de4d1677aecb7b05fdd4da000d28a88c2bd9a14244411d696dacdc55b7ce2d4",
+    "details": {
+      "query": "What if I prioritize deal value?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-FD1887B2"
+    }
+  },
+  {
+    "event_id": "EVT-0038",
+    "decision_id": "DEC-1F4E42E2",
+    "query": "What if my team only has 3 hours?",
+    "timestamp": "2026-09-26T16:19:45.185654",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "88208ac95b7ff13a30ff758491ae746380632a974ae2d1e944abfb9decd42e00",
+    "details": {
+      "query": "What if my team only has 3 hours?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-103"
+      ],
+      "sim_state": {
+        "constrained": true,
+        "time_budget_mins": 180,
+        "allocated_mins": 175,
+        "slack_mins": 5,
+        "total_deal_value": 718000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 5,
+        "excluded_count": 7,
+        "constraint_explanation": "Strict 3.0h (180 mins) team capacity applied. Optimized schedule selects 5 high-impact leads utilizing 175/180 mins ($718,000 pipeline value)."
+      },
+      "decision_id": "DEC-1F4E42E2"
+    }
+  },
+  {
+    "event_id": "EVT-0037",
+    "decision_id": "DEC-96A7C9F1",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:19:34.388262",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "ab444600d5693cf79bbbdb79e4fa842c4962c2d24937eb48cac7c9e4eb73ec29",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-96A7C9F1"
+    }
+  },
+  {
+    "event_id": "EVT-0036",
+    "decision_id": "DEC-F73D9042",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:19:34.225414",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "9c2120a9b714d4689018e988f15da1e5a2430b01b0f17c7dade4d0eb1e33cef7",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-F73D9042"
+    }
+  },
+  {
+    "event_id": "EVT-0035",
+    "decision_id": "DEC-0F3EBED0",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:19:20.705732",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "874268cd76ab8b1d2a3724ce50917b6ccc67dac1f29e250ad1ebf204260027ae",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-0F3EBED0"
+    }
+  },
+  {
+    "event_id": "EVT-0034",
+    "decision_id": "DEC-A9BB5FB2",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:19:20.563597",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "e44a4cc94725ae0cf733d2c28a6f80ec18a9f1e20646e8459f8ca8def293382f",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-A9BB5FB2"
+    }
+  },
+  {
+    "event_id": "EVT-0033",
+    "decision_id": "DEC-4CAC908B",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:10:47.356091",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "3b3faa779011ed490c01af7d6da2f05052a8ac9776d67f535867ae4a793af8e8",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-4CAC908B"
+    }
+  },
+  {
+    "event_id": "EVT-0032",
+    "decision_id": "DEC-F0CCECF7",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T16:10:47.174064",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "7dc53cf08093e2c4dd4dd3cdf7416764270f4b903a595af1e3ab8058e2e0afc4",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-F0CCECF7"
+    }
+  },
+  {
+    "event_id": "EVT-0031",
+    "decision_id": "DEC-BDA9AB0E",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:55:33.863928",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "01d8d0d8493ace97e2e37bd8ac4fbf850aa3d48ced296152b8647c3c39f6d45d",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-BDA9AB0E"
+    }
+  },
+  {
+    "event_id": "EVT-0030",
+    "decision_id": "DEC-C9721014",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:55:33.722939",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "79a5591acbc5716e20a1e4a25d33463d9fb6e49a99d4f76a4f3bd675b39ae1b3",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-C9721014"
+    }
+  },
+  {
+    "event_id": "EVT-0029",
+    "decision_id": "DEC-C83735FC",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:52:26.218563",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "fa2bd6696a1335489a8fe78cd962bc4f07f490130eb2c2b90c2d427162b9aa61",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-C83735FC"
+    }
+  },
+  {
+    "event_id": "EVT-0028",
+    "decision_id": "DEC-4E7E48C0",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:51:49.472044",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "c7be047b1c367ffc492546b19f65941cdbc932d3afb93b00b038708e3322024f",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-4E7E48C0"
+    }
+  },
+  {
+    "event_id": "EVT-0027",
+    "decision_id": "DEC-89B73A35",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:51:49.357776",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "93bb0d0fc12cf346c920c723b9888f2c22c565e64487b7614591d2444bf2554a",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-89B73A35"
+    }
+  },
+  {
+    "event_id": "EVT-0026",
+    "decision_id": "DEC-BAFC276A",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:50:06.820811",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "ab13a1c4dca34184af80cfb05596f0fe480aa8d8c72b444ebb8df7cdd7ea7ea4",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-BAFC276A"
+    }
+  },
+  {
+    "event_id": "EVT-0025",
+    "decision_id": "DEC-FC0A33B2",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:50:06.722267",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "eecec6ae04063a736c440751329306c12314e9aa8ade444380c4fc20f5d7a68d",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-FC0A33B2"
+    }
+  },
+  {
+    "event_id": "EVT-0024",
+    "decision_id": "DEC-437DD028",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:48:40.967284",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "36cc77288b6e74d7752e67b158fa1550397d52faddce3df985a4cea00600befe",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-437DD028"
+    }
+  },
+  {
+    "event_id": "EVT-0023",
+    "decision_id": "DEC-C89331B2",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:48:40.839387",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "0a307bcfd7202ef28da48b62a704d6cf439cad238c785480e93f56e51c00cedd",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-C89331B2"
+    }
+  },
+  {
+    "event_id": "EVT-0022",
+    "decision_id": "DEC-AA6793C7",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:47:05.628674",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "235e4bf7c5c735eaa21bc72bc4f72f1aed90424353b88ddba957100f85a53f0f",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-AA6793C7"
+    }
+  },
+  {
+    "event_id": "EVT-0021",
+    "decision_id": "DEC-2DD697B1",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:47:05.468092",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "e783673ac0d032995a5fee2ff130caf4ddd6d6ddf62752c7a9811399e5d573fb",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-2DD697B1"
+    }
+  },
+  {
+    "event_id": "EVT-0020",
+    "decision_id": "DEC-4265B925",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:47:05.241270",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "68791cab6fb7e9674adbc6fcae1181fb8af0ba7fed1b101280449357f36ff645",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-4265B925"
+    }
+  },
+  {
+    "event_id": "EVT-0019",
+    "decision_id": "DEC-51CE2BF5",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:47:05.068782",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "609c8ac59c8ba3c6b2886e674b0ed8604d39563db2a989f9e01b6718c8b66d77",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-51CE2BF5"
+    }
+  },
+  {
+    "event_id": "EVT-0018",
+    "decision_id": "DEC-70985C3F",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:47:04.801026",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "73ccdd1263c67cd11855e33f464a2ad425f39d45482a354b6cc75a78ee890ad3",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-70985C3F"
+    }
+  },
+  {
+    "event_id": "EVT-0017",
+    "decision_id": "DEC-44CB2941",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:47:04.668362",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "e9dad85e607e9950da7317130332d9c9c70b3326b9d6fa5bc71df3abcc0beb73",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-44CB2941"
+    }
+  },
+  {
+    "event_id": "EVT-0016",
+    "decision_id": "DEC-EAF6CAE1",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:47:04.001279",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "4964fd893002ecad4f7b70f9c95b2c74390888008f12d594009bc1d94a856321",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-EAF6CAE1"
+    }
+  },
+  {
+    "event_id": "EVT-0015",
+    "decision_id": "DEC-C68D5DD7",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:47:03.864300",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "eb231c550257d76bc136342a491841b57b80ea4ad428e483472ac10ca2a2170b",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-C68D5DD7"
+    }
+  },
+  {
+    "event_id": "EVT-0014",
+    "decision_id": "DEC-938D6C75",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:42:01.234164",
+    "action": "APPROVE",
+    "user_role": "Sales Manager",
+    "audit_hash": "65d4d5e347324a0ede9b118a331eaeabdc34541ceda550ebfabcaab6840cce3e",
+    "details": {
+      "action": "APPROVE",
+      "approved_lead_ids": [],
+      "manager_notes": "",
+      "tasks_count": 10,
+      "emails_count": 10
+    }
+  },
+  {
+    "event_id": "EVT-0013",
+    "decision_id": "DEC-938D6C75",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:38:48.926355",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "b8ae2f5f1e944e63cdad76d31faed9fd1a131bd4feb22942a7feef4a5af4b2ec",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-938D6C75"
+    }
+  },
+  {
+    "event_id": "EVT-0012",
+    "decision_id": "DEC-1DC38AD0",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:38:48.795594",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "6f99a2d8ee622546150c05316d972b58a008bcd0a3a5d5d0ea32597fb076c2ee",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-1DC38AD0"
+    }
+  },
+  {
+    "event_id": "EVT-0011",
+    "decision_id": "DEC-7E8922F6",
+    "query": "What if my team only has 3 hours?",
+    "timestamp": "2026-09-26T15:37:12.396472",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "84403dac7482f827341d50ba1b08a1caf7c5dacf4efeaa04a9d8675a54789870",
+    "details": {
+      "query": "What if my team only has 3 hours?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-103"
+      ],
+      "sim_state": {
+        "constrained": true,
+        "time_budget_mins": 180,
+        "allocated_mins": 175,
+        "slack_mins": 5,
+        "total_deal_value": 718000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 5,
+        "excluded_count": 7,
+        "constraint_explanation": "Strict 3.0h (180 mins) team capacity applied. Optimized schedule selects 5 high-impact leads utilizing 175/180 mins ($718,000 pipeline value)."
+      },
+      "decision_id": "DEC-7E8922F6"
+    }
+  },
+  {
+    "event_id": "EVT-0010",
+    "decision_id": "DEC-6893F9F6",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:36:39.098106",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "4dc0b980692c06664311a712b07ff445e8abab1b7c65a05053434b324d23417b",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-6893F9F6"
+    }
+  },
+  {
+    "event_id": "EVT-0009",
+    "decision_id": "DEC-BD931A63",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:36:38.941862",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "aa651e676811533ed8996d67b74fdcaebcc314e7b05e09934e5139686966cf1b",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-BD931A63"
+    }
+  },
+  {
+    "event_id": "EVT-0008",
+    "decision_id": "DEC-17B953C6",
+    "query": "What if I prioritize deal value?",
+    "timestamp": "2026-09-26T15:29:06.132984",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "6f83b0d82107117772304e767cfb14b5698ef9461ffa03cc481d2deca9fededa",
+    "details": {
+      "query": "What if I prioritize deal value?",
+      "top_leads": [
+        "LEAD-101",
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "deal_value",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with deal_value weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-17B953C6"
+    }
+  },
+  {
+    "event_id": "EVT-0007",
+    "decision_id": "DEC-F9ADC54C",
+    "query": "What if I prioritize deal value?",
+    "timestamp": "2026-09-26T15:29:00.649648",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "3c697a89d26731067f0edb9b437fc14d2b75c0b51d1e4aedafd0c2bbc0ac0e47",
+    "details": {
+      "query": "What if I prioritize deal value?",
+      "top_leads": [
+        "LEAD-101",
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "deal_value",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with deal_value weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-F9ADC54C"
+    }
+  },
+  {
+    "event_id": "EVT-0006",
+    "decision_id": "DEC-E03A77A6",
+    "query": "Why not Vanguard Logistics?",
+    "timestamp": "2026-09-26T15:28:46.854110",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "5a78dbbfdeabc78ab9d45f0db2952e5667ca3f6ab7df53ab66fae95d8a10ff63",
+    "details": {
+      "query": "Why not Vanguard Logistics?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-E03A77A6"
+    }
+  },
+  {
+    "event_id": "EVT-0005",
+    "decision_id": "DEC-2C412579",
+    "query": "Why not Vanguard Logistics?",
+    "timestamp": "2026-09-26T15:28:33.568243",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "a35692a5ddea67f52e79303d9538d39389fe450d8164e8c67815ef101c942a2f",
+    "details": {
+      "query": "Why not Vanguard Logistics?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-2C412579"
+    }
+  },
+  {
+    "event_id": "EVT-0004",
+    "decision_id": "DEC-E4B863DF",
+    "query": "What if I prioritize deal value?",
+    "timestamp": "2026-09-26T15:28:33.492375",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "066b04267511c84b99a4493734e7c0e656aba2b7dbb80999f70540cc56589039",
+    "details": {
+      "query": "What if I prioritize deal value?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-101",
+        "LEAD-104",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "deal_value",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with deal_value weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-E4B863DF"
+    }
+  },
+  {
+    "event_id": "EVT-0003",
+    "decision_id": "DEC-84B778C2",
+    "query": "What if my team only has 3 hours?",
+    "timestamp": "2026-09-26T15:28:33.431181",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "844c9a686f9f431144bd9b52586903c3e2636bd621ff553284f8bb85108809f6",
+    "details": {
+      "query": "What if my team only has 3 hours?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-103"
+      ],
+      "sim_state": {
+        "constrained": true,
+        "time_budget_mins": 180,
+        "allocated_mins": 175,
+        "slack_mins": 5,
+        "total_deal_value": 718000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 5,
+        "excluded_count": 7,
+        "constraint_explanation": "Strict 3.0h (180 mins) team capacity applied. Optimized schedule selects 5 high-impact leads utilizing 175/180 mins ($718,000 pipeline value)."
+      },
+      "decision_id": "DEC-84B778C2"
+    }
+  },
+  {
+    "event_id": "EVT-0002",
+    "decision_id": "DEC-2D021B2A",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:28:24.724808",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "ee8f6afe4b3b41f8c7a8347d19eaba788a3cacef033190c4c2449eb7a11700b0",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-2D021B2A"
+    }
+  },
+  {
+    "event_id": "EVT-0001",
+    "decision_id": "DEC-9097631A",
+    "query": "Which leads should my team prioritize today?",
+    "timestamp": "2026-09-26T15:28:01.578538",
+    "action": "CREATED",
+    "user_role": "Sales Manager",
+    "audit_hash": "642d2fd215eb8c985d538e96253c0103878104396fa2869bc81f8cf81d8db1d2",
+    "details": {
+      "query": "Which leads should my team prioritize today?",
+      "top_leads": [
+        "LEAD-106",
+        "LEAD-104",
+        "LEAD-101",
+        "LEAD-102",
+        "LEAD-105"
+      ],
+      "sim_state": {
+        "constrained": false,
+        "time_budget_mins": null,
+        "allocated_mins": 390,
+        "total_deal_value": 1751000,
+        "priority_weight": "balanced",
+        "leads_evaluated": 12,
+        "leads_selected": 10,
+        "constraint_explanation": "Unconstrained ranking with balanced weighting. Top 10 leads prioritized."
+      },
+      "decision_id": "DEC-9097631A"
+    }
+  }
+]

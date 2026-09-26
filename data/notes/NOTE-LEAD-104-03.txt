@@ -1,0 +1,9 @@
+---
+lead_id: LEAD-104
+author: Devon Miller
+date: 2026-09-25 11:00
+type: Sales Call Notes
+subject: TerraGreen Fiscal Year End Budget Surplus
+---
+
+Liam Gallagher informed me that TerraGreen's fiscal year closes this Friday, September 30. They have $95,000 in unallocated CapEx budget that will expire if not committed this week. Quote #TG-4029 has already been drawn up. A quick 30-minute alignment call with their procurement desk today will secure PO signature.

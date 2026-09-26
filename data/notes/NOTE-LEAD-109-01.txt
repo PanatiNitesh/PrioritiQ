@@ -1,0 +1,9 @@
+---
+lead_id: LEAD-109
+author: Devon Miller
+date: 2026-09-14 11:30
+type: Executive Debrief
+subject: Aether Dynamics Procurement Freeze
+---
+
+General Keith Bradley informed us that due to federal defense contract reassessments, all external SaaS procurement exceeding $250k is frozen until Q1 2027. Deal size: $420,000. No immediate buying authority. Recommend deferring active outreach until December.

@@ -1,0 +1,9 @@
+---
+lead_id: LEAD-101
+author: Strategic Accounts Desk
+date: 2026-09-24 14:00
+type: Company Note
+subject: ApexFin Q4 Expansion & Decision-Maker Map
+---
+
+ApexFin Technologies is consolidating their sales intelligence stack from Gong and Clari into PrioritiQ. Primary champion Sarah Jenkins (VP RevOps) reports directly to CEO David Vance. Budget ($145k) is already fully reserved under their FY26 automation modernization budget. Key risk: contract must execute prior to their September 30 end-of-quarter blackout.

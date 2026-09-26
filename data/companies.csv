@@ -1,0 +1,13 @@
+company_id,name,domain,industry,employees,annual_revenue,tech_stack,region,icp_fit
+COMP-101,ApexFin Technologies,apexfin.io,Fintech,420,85000000,"AWS, Postgres, Snowflake",North America,96
+COMP-102,BioHealth Global,biohealth.co,Healthcare,1250,210000000,"Azure, Epic, Salesforce",North America,92
+COMP-103,OmniRetail Group,omniretail.com,E-Commerce,890,145000000,"GCP, Shopify Plus, BigQuery",Europe,88
+COMP-104,CyberShield Labs,cybershield.ai,Cybersecurity,310,62000000,"AWS, Kubernetes, Datadog",North America,94
+COMP-105,Vanguard Logistics,vanguardlog.com,Supply Chain,2400,380000000,"SAP, Oracle, Azure",North America,78
+COMP-106,Aether Dynamics,aetherdyn.com,Aerospace & Defense,1800,450000000,"On-Prem, AWS GovCloud",North America,84
+COMP-107,PulseMedia Networks,pulsemedia.tv,Media & Entertainment,520,95000000,"GCP, Cloudflare, Segment",Europe,72
+COMP-108,TerraGreen Energies,terragreen.energy,CleanTech,640,110000000,"AWS, Snowflake, Tableau",North America,89
+COMP-109,NexusPay Solutions,nexuspay.io,Fintech,280,48000000,"GCP, Stripe, Postgres",North America,91
+COMP-110,Titan Heavy Industries,titanind.com,Manufacturing,4600,820000000,"SAP, Infor, Microsoft 365",Europe,65
+COMP-111,Lumina SaaS Systems,luminasaas.com,Enterprise Software,390,72000000,"AWS, React, MongoDB",North America,95
+COMP-112,Zenith AI Corp,zenithai.dev,Artificial Intelligence,180,35000000,"GCP, PyTorch, Ray",North America,90

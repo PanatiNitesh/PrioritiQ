@@ -1,0 +1,15 @@
+---
+lead_id: LEAD-104
+author: Liam Gallagher
+date: 2026-09-25 11:15
+type: Customer Email
+subject: Quote #TG-4029 CapEx Surplus Approval Window
+---
+
+From: Liam Gallagher <lgallagher@terragreen.energy>
+To: Devon Miller <dmiller@prioritiq.ai>
+Date: Thu, 25 Sep 2026 11:15:02 CST
+Subject: Re: Quote TG-4029 Follow-up
+
+Devon,
+Our annual fiscal year closes this Friday. Our procurement director confirmed that the $95,000 CapEx balance is approved for Quote #TG-4029. Please get our mutual signatures on the clean agreement by 3:00 PM Thursday so accounting can release the purchase order.

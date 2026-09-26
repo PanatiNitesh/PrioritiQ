@@ -1,0 +1,9 @@
+---
+lead_id: LEAD-106
+author: Devon Miller
+date: 2026-09-26 10:10
+type: DocuSign Telemetry
+subject: NexusPay DocuSign envelope activity
+---
+
+Telemetry alert: Jordan Morales (VP Merchant Ops) and CFO David Lin have opened the final DocuSign agreement ($78,000 ARR) 4 times between 09:30 and 10:05 AM. Sent reminder ping. Closing probability 99% with estimated 25-minute closing call to answer minor billing questions.

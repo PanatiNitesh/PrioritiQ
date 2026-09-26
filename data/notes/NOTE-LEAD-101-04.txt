@@ -1,0 +1,17 @@
+---
+lead_id: LEAD-101
+author: Alex Rivera
+date: 2026-09-26 08:42
+type: Inbound Email
+subject: Urgent: Final board sign-off pending indemnification clause update
+---
+
+From: Sarah Jenkins <sjenkins@apexfin.io>
+To: Alex Rivera <arivera@decisiongraph.ai>
+Date: Fri, 26 Sep 2026 08:42:15 EDT
+Subject: Re: ApexFin & DecisionGraph Contract Review
+
+Hi Alex,
+Good news - our CFO and General Counsel met early this morning. We have full executive authorization to execute the $145,000 annual agreement today, provided we make one quick edit to Section 9.2 (standard mutual indemnification wording).
+If your legal team can return the updated contract before 2:00 PM EST, our CEO will countersign before our end-of-quarter freeze at 5:00 PM today.
+Please call my direct line if you can turn this around this morning.

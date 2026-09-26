@@ -1,0 +1,9 @@
+---
+lead_id: LEAD-108
+author: Elena Rostova
+date: 2026-09-24 16:00
+type: Competitive Analysis
+subject: OmniRetail evaluating competitor platform
+---
+
+Chloe Dupont stated that a competitor has offered an aggressive 30% first-year discount. OmniRetail wants a feature comparison on real-time decision explainability before proceeding. Potential deal: $115,000, but closing cycle will take at least 3-4 more weeks. Lower immediate priority for today.

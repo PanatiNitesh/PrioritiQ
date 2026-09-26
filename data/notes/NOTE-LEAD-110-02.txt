@@ -1,0 +1,9 @@
+---
+lead_id: LEAD-110
+author: Elena Rostova
+date: 2026-09-25 14:20
+type: Procurement Note
+subject: Zenith AI purchase order approval
+---
+
+Dr. Tanya O'Connor communicated that Zenith's finance committee approved our $88,000 quote. They are waiting for our technical architecture whitepaper and will issue PO on Friday. Requires 30 minutes to review deployment architecture with their lead DevOps engineer.

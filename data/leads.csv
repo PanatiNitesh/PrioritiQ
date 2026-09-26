@@ -1,0 +1,13 @@
+lead_id,company_id,name,title,email,phone,stage,deal_size,created_date,last_activity_date,assigned_rep,touchpoints_count,intent_score,est_effort_mins,delta_status,churn_risk
+LEAD-101,COMP-101,Sarah Jenkins,VP of Revenue Operations,sjenkins@apexfin.io,+1-415-555-0192,Negotiation,145000,2026-08-15,2026-09-26,Alex Rivera,14,96,35,URGENT_INBOUND_TODAY,Low
+LEAD-102,COMP-104,Marcus Vance,Chief Information Security Officer,mvance@cybershield.ai,+1-206-555-0144,Proposal,180000,2026-08-20,2026-09-25,Elena Rostova,11,92,45,SECURITY_REVIEW_CLEARED,Low
+LEAD-103,COMP-102,Dr. Eleanor Hayes,Head of Clinical Informatics,ehayes@biohealth.co,+1-617-555-0188,Demo,220000,2026-09-01,2026-09-26,Alex Rivera,8,89,40,EXECUTIVE_JOINED_EVAL,Medium
+LEAD-104,COMP-108,Liam Gallagher,Director of Grid Intelligence,lgallagher@terragreen.energy,+1-512-555-0173,Negotiation,95000,2026-08-10,2026-09-25,Devon Miller,16,91,30,FISCAL_YEAR_END_FRIDAY,Low
+LEAD-105,COMP-111,Rachel Kim,Chief Technology Officer,rkim@luminasaas.com,+1-650-555-0131,Proposal,130000,2026-08-28,2026-09-26,Elena Rostova,9,87,30,CONTRACT_REDLINE_RECEIVED,Low
+LEAD-106,COMP-109,Jordan Morales,VP of Merchant Operations,jmorales@nexuspay.io,+1-312-555-0165,Closing,78000,2026-07-22,2026-09-26,Devon Miller,19,95,25,SIGNATURE_PENDING_TODAY,Low
+LEAD-107,COMP-105,Harold Sterling,SVP Global Fleet Systems,hsterling@vanguardlog.com,+1-404-555-0129,Discovery,310000,2026-09-12,2026-09-19,Alex Rivera,4,62,60,STALLED_NO_UPDATE_7D,High
+LEAD-108,COMP-103,Chloe Dupont,Head of Omnichannel Strategy,cdupont@omniretail.com,+33-1-55-55-01-42,Demo,115000,2026-09-05,2026-09-24,Elena Rostova,7,79,35,COMPETITOR_EVAL_ACTIVE,Medium
+LEAD-109,COMP-106,General Keith Bradley (Ret.),Director of Secure Avionics,kbradley@aetherdyn.com,+1-703-555-0182,Discovery,420000,2026-08-01,2026-09-14,Devon Miller,5,58,60,BUDGET_FROZEN_UNTIL_Q1,High
+LEAD-110,COMP-112,Dr. Tanya O’Connor,Chief Scientist & Co-Founder,toconnor@zenithai.dev,+1-650-555-0199,Proposal,88000,2026-09-08,2026-09-25,Elena Rostova,10,86,30,TECH_PO_APPROVED,Low
+LEAD-111,COMP-107,Bradley Cooper-Smith,Director of Digital Delivery,bcoopersmith@pulsemedia.tv,+44-20-7946-0123,Discovery,65000,2026-09-15,2026-09-22,Alex Rivera,3,54,45,LOW_ENGAGEMENT,High
+LEAD-112,COMP-110,Klaus Richter,VP Automation Systems,krichter@titanind.com,+49-89-555-0155,Discovery,280000,2026-08-18,2026-09-10,Devon Miller,6,49,60,DECISION_MAKER_ON_LEAVE,High

@@ -1,0 +1,9 @@
+---
+lead_id: LEAD-112
+author: Devon Miller
+date: 2026-09-10 10:00
+type: Account Note
+subject: Titan Heavy Industries key stakeholder on sabbatical
+---
+
+Klaus Richter is on extended sabbatical until late October. Alternate contact lacks purchasing authority for deals over $50k. Deal size $280,000 is on hold. Mark as deferred.

@@ -1,0 +1,9 @@
+---
+lead_id: GLOBAL-PROD
+author: Product Engineering
+date: 2026-09-20 10:00
+type: Product Document
+subject: PrioritiQ Zero-Trust Data Ingestion & SOC2 Specifications
+---
+
+PrioritiQ Zero-Trust Architecture guarantees that customer CRM data, email streams, and transcripts remain encrypted in-transit (TLS 1.3) and at-rest (AES-256). Enterprise tier includes VPC peering, HIPAA BAA compliance, SOC2 Type II audited perimeter, and customer-managed KMS keys. Deployments can run fully on-premises or via dedicated AWS/Azure private endpoints without external model training leakage.

@@ -1,0 +1,10 @@
+---
+lead_id: LEAD-103
+author: Alex Rivera
+date: 2026-09-26 09:30
+type: Meeting Transcript
+subject: CMO Dr. Robert Chen on HIPAA BAA & Multi-Hospital Analytics
+---
+
+Speaker 1 (Alex Rivera): 'Dr. Chen, thank you for joining Eleanor on today's session.'
+Speaker 2 (Dr. Robert Chen, CMO): 'We have 14 clinical networks struggling with prioritization. If your engine can parse our clinical triage metrics while maintaining BAA safeguards, we have the $220k budget available right now. We just need the BAA signed today to present to our clinical board Monday.'

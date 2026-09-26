@@ -1,0 +1,13 @@
+activity_id,lead_id,type,timestamp,rep,duration,outcome,notes_ref
+ACT-301,LEAD-101,Email Inbound,2026-09-26 08:42,Alex Rivera,0,Urgent Request,NOTE-LEAD-101-04
+ACT-302,LEAD-101,Executive Call,2026-09-25 15:30,Alex Rivera,45,Pricing Agreed,NOTE-LEAD-101-03
+ACT-303,LEAD-102,Security Clearance,2026-09-25 17:15,Elena Rostova,30,SOC2 Approved,NOTE-LEAD-102-03
+ACT-304,LEAD-103,Demo Meeting,2026-09-26 09:15,Alex Rivera,50,VP Clinical Joined,NOTE-LEAD-103-02
+ACT-305,LEAD-104,Phone Call,2026-09-25 11:00,Devon Miller,25,Budget Deadline Confirmed,NOTE-LEAD-104-03
+ACT-306,LEAD-105,Email Inbound,2026-09-26 07:55,Elena Rostova,0,Legal Redlines,NOTE-LEAD-105-02
+ACT-307,LEAD-106,DocuSign Sent,2026-09-26 10:10,Devon Miller,15,DocuSign Opened,NOTE-LEAD-106-03
+ACT-308,LEAD-107,Voicemail,2026-09-19 14:00,Alex Rivera,5,No Response,NOTE-LEAD-107-01
+ACT-309,LEAD-108,Competitive Comparison,2026-09-24 16:00,Elena Rostova,40,Evaluating Competitor X,NOTE-LEAD-108-02
+ACT-310,LEAD-109,Status Check,2026-09-14 11:30,Devon Miller,20,Government Budget Delayed,NOTE-LEAD-109-01
+ACT-311,LEAD-110,PO Confirmation,2026-09-25 14:20,Elena Rostova,20,Finance Approved,NOTE-LEAD-110-02
+ACT-312,LEAD-112,Email Outbound,2026-09-10 10:00,Devon Miller,0,Out of Office Reply,NOTE-LEAD-112-01

@@ -1,0 +1,9 @@
+---
+lead_id: LEAD-103
+author: Alex Rivera
+date: 2026-09-26 09:15
+type: Call Transcript
+subject: BioHealth Clinical Informatics Demo debrief
+---
+
+Dr. Eleanor Hayes brought Dr. Robert Chen (Chief Medical Officer) onto our morning demo unexpectedly. This is a massive positive signal: Chen stated 'This directly solves our HIPAA analytics bottleneck across 14 hospital networks'. Deal size estimated at $220,000. Next action required: follow up with HIPAA BAA addendum within 24 hours to keep momentum.

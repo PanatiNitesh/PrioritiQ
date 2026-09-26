@@ -1,0 +1,9 @@
+---
+lead_id: LEAD-105
+author: Elena Rostova
+date: 2026-09-26 07:55
+type: Inbound Redline
+subject: Lumina SaaS Master Service Agreement redlines
+---
+
+CTO Rachel Kim returned our standard MSA with 3 minor redlines regarding API uptime SLA (requesting 99.95% instead of 99.9%). Our VP Eng approved this variance. Contract value: $130,000 ARR. Rachel noted: 'Send over the clean DocuSign copy and I will sign today.'

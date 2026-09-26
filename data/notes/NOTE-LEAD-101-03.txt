@@ -1,0 +1,9 @@
+---
+lead_id: LEAD-101
+author: Alex Rivera
+date: 2026-09-25 15:30
+type: Executive Call Transcript
+subject: Negotiation wrap-up call with VP RevOps
+---
+
+Summary: Sarah Jenkins confirmed they evaluated Competitor Gong and Clari, but chose DecisionGraph because of our real-time evidence graph explainability. Budget of $145k is 100% earmarked from this fiscal quarter's ops budget. Deal velocity is exceptionally high - 42 days from initial discovery to negotiation. Close probability rated 95%.
