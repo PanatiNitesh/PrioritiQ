@@ -10,19 +10,19 @@
   <img src="https://img.shields.io/badge/Audit-Cryptographic%20SHA--256-D97706?style=for-the-badge&logo=vault&logoColor=white" />
 </p>
 
-> **The PrioritiQ Axiom**: Never entrust mission-critical commercial strategy to an ungrounded LLM hallucinating sales priorities.  
+> **Core Philosophy**: Never entrust mission-critical commercial strategy to an ungrounded LLM that hallucinates sales priorities.  
 > **The Solution**: Deterministic Analytics + Semantic Hybrid RAG + 2D Knapsack Capacity Optimization + Blast-Radius Risk Modeling + Primary-Key Fact Checking + Cryptographic Hash Chain Audit Ledger + Human-in-the-Loop Governance.
 
 ---
 
 ## 🎯 Executive Overview
 
-**PrioritiQ** is an enterprise-grade sales decision intelligence engine designed for VP of Sales, Revenue Operations, and Sales Managers who must answer high-stakes commercial questions with **100% mathematical and factual integrity**:
+**PrioritiQ** is an enterprise sales decision intelligence engine designed for VP of Sales, Revenue Operations, and Sales Managers who must answer high-stakes commercial questions with **100% mathematical and factual integrity**:
 
 * **"Which leads should my sales team prioritize today, and why?"** (Deterministic multi-factor composite scoring)
 * **"What if my team only has 3 hours?"** (2D Dynamic Programming knapsack solver packing highest ROI accounts without violating time bounds or deal limits)
 * **"What is the collateral damage of deferring accounts?"** (Pre-execution blast-radius prediction calculating account attrition, rep skew variance, and quarter-end commit slippage)
-* **"Why this lead and why not another (e.g. Vanguard Logistics)?"** (Multi-dimensional counterfactual tradeoff analysis with line-level RAG citations)
+* **"Why this lead and why not another (e.g., Vanguard Logistics)?"** (Multi-dimensional counterfactual tradeoff analysis with line-level RAG citations)
 * **"What changed since yesterday?"** (Real-time CRM and activity delta detection evaluated against dynamic dataset epochs)
 * **"Approve and execute this recommendation"** (Immutable approval pipeline generating personalized outreach drafts and appending to a cryptographic SHA-256 hash chain ledger)
 
@@ -30,7 +30,7 @@
 
 ## ⚔️ PrioritiQ vs. The Competition
 
-Most sales organizations rely either on legacy **Black-Box CRM Scoring** (arbitrary opacity) or **Generic LLM Wrappers** (hallucination-prone, operationally blind). PrioritiQ represents a new standard of **Deterministic Evidence-Grounded Decision Intelligence**:
+Most sales organizations rely either on legacy **Black-Box CRM Scoring** (arbitrary opacity) or **Generic LLM Wrappers** (hallucination-prone, operationally blind). PrioritiQ provides a transparent, verifiable, and constrained decision intelligence platform:
 
 | Capability | Traditional CRM AI (Salesforce Einstein, HubSpot) | Generic LLM Chatbots & Copilots (ChatGPT, Copilot) | PrioritiQ Enterprise Decision Engine |
 | :--- | :--- | :--- | :--- |
@@ -101,78 +101,86 @@ flowchart TD
 
 ---
 
-## 🔬 Core Engineering Pillars
+## 🚀 What We Have Done: The PrioritiQ Solution
 
-### 1. Deterministic 2D Knapsack DP Capacity Optimizer
-Unlike standard recommendation lists that ignore time and rep capacity, PrioritiQ formulates daily rep scheduling as a **Two-Dimensional Bounded Knapsack Problem**:
-$$\max \sum_{i \in S} \text{final\_score}_i \quad \text{subject to} \quad \sum_{i \in S} \text{effort\_mins}_i \le \text{budget\_mins} \quad \text{and} \quad |S| \le \text{limit}$$
+PrioritiQ was built from the ground up to eliminate the critical failure points of current enterprise decision tools:
 
-* **Zero Deal-Size Distortion**: Directly optimizes strategic composite scores without applying distortive non-linear double-weightings (e.g. `* sqrt(deal_size)`).
-* **Strict Cardinality Bounds**: Enforces maximum lead limits ($K$) alongside operational effort bounds ($W$).
-* **Time Feasibility**: Guarantees reps are never assigned schedules they cannot physically complete in a given shift.
+### 1. Deterministic Multi-Factor Lead Scoring Engine
+Instead of arbitrary neural-net predictions, PrioritiQ calculates deterministic composite scores across verified dimensions:
+* **Deal Normalization**: Calibrated log-scale normalization across pipeline values.
+* **Stage Probability Weights**: Dynamic multipliers according to sales pipeline milestones (`Closing = 1.0`, `Negotiation = 0.88`, `Proposal = 0.72`, `Demo = 0.55`, `Discovery = 0.35`).
+* **Behavioral Intent & Touchpoint Velocity**: Real-time engagement frequency from inbound telemetry.
+* **Enterprise ICP Alignment**: Firmographic fit scored against target employee tiers, annual revenue, and technology stack compatibility.
+* **Dynamic Recency Decay**: Time decay modeled dynamically from the latest activity timestamp in the database, preventing stale calendar decay.
 
-### 2. Pre-Execution Blast-Radius Predictor
-Resource reallocation always produces collateral damage. PrioritiQ models downstream impacts before executing reallocations:
-* **Account Attrition Cost**: Identifies high-churn enterprise accounts left unserviced by budget constraints and computes compounding daily neglect costs:
-  $$\text{Daily Attrition Risk} = \sum_{l \in \text{Excluded}} \text{deal\_size}_l \times P(\text{churn}_l)$$
-* **Sales Rep Capacity Skew**: Calculates per-rep effort allocations, computes the team workload standard deviation ($\sigma_{\text{mins}}$), and warns of operational bottlenecks (e.g. one rep assigned $>180$ mins while another receives $0$ mins).
-* **Quota Commit Slippage**: Audits late-stage deals (Negotiation, Proposal) deferred outside the current operational batch to protect quarter-end forecasting.
+### 2. Two-Dimensional Bounded Knapsack DP Solver
+Standard CRM tools order leads linearly by score, ignoring the fact that sales reps have strict shift boundaries. When a manager asks *"What if my team only has 3 hours?"*, PrioritiQ formulates a **2D Bounded Dynamic Programming Knapsack Solver**:
 
-### 3. Zero-Hallucination Verification Agent
+```text
+Maximize:   Σ Final_Score_i   for all selected leads i ∈ S
+Subject To: Σ Effort_Mins_i ≤ Available_Time_Mins
+            |S| ≤ Requested_Limit
+```
+
+* **Capacity Constraint**: Allocates deals so that cumulative rep effort never exceeds the available time budget.
+* **Cardinality Limit**: Guarantees output conforms to requested page size bounds.
+* **Direct Objective Alignment**: Directly maximizes strategic score without distorting deal size, ensuring user strategies like `Velocity` or `Balanced` remain strictly honored.
+
+### 3. Pre-Execution Blast-Radius Predictor
+Every resource prioritization decision creates trade-offs. PrioritiQ models downstream operational consequences before recommendations are executed:
+
+* **Account Attrition Cost**: Calculates the pipeline exposure of excluded accounts, especially high-churn customers left unserviced:
+  ```text
+  Daily Attrition Risk = Σ (Deal_Size_i × Churn_Probability_i)  for all i ∈ Excluded_Accounts
+  ```
+* **Sales Rep Capacity Skew & Bottlenecks**: Analyzes rep workload balance, computes the standard deviation of allocated effort (`±10.8 mins`), and flags operational bottlenecks (e.g. assigning one rep 190 minutes while another receives 0 minutes).
+* **Quota & Commitment Slippage**: Flags late-stage deals (Negotiation, Proposal) deferred outside the immediate schedule to protect quarterly forecasts.
+* **Live Governance Warnings**: Surfaces collateral damage warnings directly on the approval console.
+
+### 4. Zero-Hallucination Verification Agent
 PrioritiQ implements verifiable proof mechanisms across every recommendation:
-* **Primary-Key Database Cross-Check**: Fetches ground-truth records directly from `prioritiq.db` via `get_lead_by_id(lead_id)`. Verifies that `deal_size`, `assigned_rep`, and `stage` match primary storage with zero corruption.
-* **Quote Provenance & Citation Tracking**: Cross-checks citation quotes against raw markdown notes and transcripts to guarantee quote provenance.
-* **Lexical Entailment Scoring**: Evaluates token and n-gram overlap between generated recommendation claims and retrieved unstructured evidence.
-* **Calibrated Confidence**: Eliminates hardcoded `99.4%` marketing strings; calculates true mathematical grounding percentages based on verified checks.
 
-### 4. Append-Only Cryptographic Hash Chain Audit Ledger
-Compliance and enterprise governance require non-repudiation:
-* **Preimage Hash Chaining**: Every audit entry includes the previous block's SHA-256 hash in its preimage:
-  $$\text{AuditHash}_k = \text{SHA-256}\left(\text{AuditHash}_{k-1} \,\|\, \text{EventID}_k \,\|\, \text{DecisionID}_k \,\|\, \text{Timestamp}_k \,\|\, \text{Action}_k \,\|\, \text{Payload}_k\right)$$
-* **Concurrency Locking**: Atomic SQLite transactions with Python threading locks guarantee thread-safe writes with zero race conditions.
-* **Cryptographic Verification API**: An automated verification endpoint (`GET /api/decisions/audit/verify`) traverses the chain from Genesis block to latest event, detecting any retroactive tampering.
+* **Primary-Key Database Integrity**: Directly queries the `prioritiq.db` database using primary keys (`LEAD-101`, `COMP-201`). Validates that `deal_size`, `stage`, and `assigned_rep` have not been mutated or corrupted.
+* **Citation Quote Provenance**: Cross-references every retrieved citation against the underlying source documents (emails, meeting transcripts, contract redlines) to confirm quote authenticity.
+* **Semantic Entailment Verification**: Evaluates lexical entailment between recommendation claims and cited evidence.
+* **Calibrated Confidence**: Computes dynamic grounding scores (e.g., `94.2%`) rather than displaying static marketing strings.
 
-### 5. Semantic Hybrid RAG Layer
-Unstructured commercial knowledge is indexed and retrieved with line-level attribution:
-* **Sliding-Window Chunker**: Breaks complex contracts, email threads, and meeting transcripts into 120-word windows with 25-word overlaps.
-* **Hybrid Retrieval**: Combines semantic embeddings with exact token containment for industry-specific terminology (e.g., SOC2 Type II, Section 9.2 indemnification, CapEx surplus deadlines).
+### 5. Append-Only Cryptographic Hash Chain Audit Ledger
+Enterprise compliance requires immutable accountability:
 
-### 6. Interactive Explainability DAG (Directed Acyclic Graph)
-The frontend features an explainability graph rendering deterministic lineage:
-* **Curved SVG Connectors**: Renders cubic bezier paths linking `Policy/Constraints` $\to$ `Selected Accounts` $\to$ `Grounded Evidence` $\to$ `Dispatched Actions`.
-* **Dynamic Hover Tracing**: Hovering or selecting any card illuminates its entire causal chain with emerald and amber highlights while dimming unrelated nodes.
+* **SHA-256 Preimage Chaining**: Each audit entry incorporates the hash of the preceding block into its calculation:
+  ```text
+  Audit_Hash_k = SHA-256( Previous_Hash_(k-1) || Event_ID_k || Decision_ID_k || Timestamp_k || Action_k || Payload_k )
+  ```
+* **Thread-Safe ACID Transactions**: Writes are protected by database transactions and concurrency locks to prevent race conditions during concurrent manager approvals.
+* **Cryptographic Verification Endpoint**: Provides `GET /api/decisions/audit/verify` which verifies the entire ledger from the Genesis block to detect historical tampering.
 
----
+### 6. Semantic Hybrid RAG Layer
+Unstructured enterprise knowledge is indexed and retrieved with line-level attribution:
 
-## 🛠️ The 15 Enterprise Vulnerabilities Solved
+* **Sliding-Window Chunker**: Segments complex agreements, call notes, and transcripts into 120-word windows with 25-word overlaps.
+* **Hybrid Retrieval**: Combines semantic embeddings with exact token containment for domain-specific terminology (e.g. Section 9.2 indemnification, SOC2 Type II clearance, CapEx fiscal deadlines).
+* **Verbatim Provenance**: Citations specify the exact source file, author, timestamp, and verbatim quote.
 
-During architectural auditing, 15 critical and high-severity weaknesses were identified. PrioritiQ resolved all 15:
+### 7. Interactive Explainability DAG (Directed Acyclic Graph)
+The frontend console provides complete visual transparency into decision logic:
 
-| # | Weakness Category | Original Issue | Engineering Solution in PrioritiQ |
-|---|---|---|---|
-| **1** | Evidence-Grounding | Superficial tautological verification checks; hardcoded `0.99` confidence. | Implemented PK database cross-checking, quote provenance matching, and dynamic calibrated grounding scoring in `backend/agents/verification_agent.py`. |
-| **2** | Blast-Radius Prediction | Complete absence of cascading impact, neglect cost, and rep skew modeling. | Built `backend/analytics/blast_radius.py` computing account attrition cost, rep skew variance (`±10.8 mins`), and quota slippage. |
-| **3** | Reliability | Volatile in-memory cache; silent default query fallback on missing ID. | Backed caching with SQLite persistence (`persist_decision`); missing IDs return strict **HTTP 404** without silent corruption. |
-| **4** | Technical Architecture | Disconnected database (`db.py` dead code); repeated CSV disk I/O. | Migrated all analytics, routes, and agents to indexed tables in `prioritiq.db` with WAL mode; eliminated disk thrashing. |
-| **5** | Evaluation Methodology | Zero unit tests, golden datasets, or automated evals; hardcoded static UI strings. | Built comprehensive `tests/` directory with 63 automated tests: 2D knapsack DP tests, PK tests, 50-query benchmark, and RAG evals. |
-| **6** | Agent Architecture | Rigid regex-based intent agent failing compound queries; hardcoded `0.98` confidence. | Built `IntentOrchestrator` parsing multi-clause compound queries with dynamic entity resolution and calibrated confidence. |
-| **7** | Reliability & Security | Audit ledger without hash chaining (no `previous_hash`); JSON concurrency race conditions. | Built append-only cryptographic hash chain with `previous_hash` linking and thread-safe DB transactions; added verification endpoint. |
-| **8** | Evidence-Grounding | Hardcoded `if lid == "LEAD-101"` action payloads and canned email drafts. | Built dynamic `generate_action_payload` synthesizing lead metadata with retrieved RAG citations and delta signals. |
-| **9** | Technical Architecture | TF-IDF bag-of-words index marketed as vector embeddings. | Built sliding-window chunker (120w window / 25w overlap) and hybrid semantic vector index in `backend/rag/`. |
-| **10** | Technical Reliability | Hardcoded static reference date (`2026-09-26`) causing instant date decay on fresh data. | Replaced static date with `get_max_dataset_timestamp()` to dynamically calculate recency decay from ingested data. |
-| **11** | UX / Explainability | Interactive DAG rendered zero edges (plain 4-column table truncated to 4 items). | Built interactive SVG DAG edge renderer in `DecisionGraphViewer.tsx` with curved cubic bezier splines and hover lineage tracing. |
-| **12** | UX / Theme Consistency | Broken Decision Detail page (re-ran default query on inspect; dark theme clash). | Rewrote `DecisionDetail.tsx` to fetch exact decision dossiers by ID and unified with Nordic Verdigris & Porcelain styling. |
-| **13** | Missing Functionality | No outbound webhooks or background execution pipeline (browser `alert()`). | Implemented `WebhookDispatcher` with HMAC-SHA256 signatures, async background dispatch, and `/api/decisions/config/webhooks`. |
-| **14** | Missing Functionality | Inflexible hardcoded scoring weights without developer customization API. | Built dynamic `rules.py` with DB persistence and exposed `/api/decisions/config/rules` API for runtime policy tuning. |
-| **15** | Algorithmic Design | Knapsack solver ignored `limit` bounds and distorted objectives via `* sqrt(deal_size)`. | Rewrote 2D DP knapsack solver in `backend/analytics/ranking.py` enforcing `count <= limit` and optimizing strategic `final_score`. |
+* **Curved SVG Connectors**: Renders cubic bezier splines with directional arrowheads linking `Policy & Goals` $\to$ `Selected Accounts` $\to$ `Grounded Evidence` $\to$ `Dispatched Actions`.
+* **Interactive Hover Lineage**: Hovering over or clicking any account card highlights its entire causal lineage while dimming unrelated graph elements.
+* **Deep Inspection**: Clicking any node opens a detail drawer displaying source files, confidence levels, and connected relational edges.
+
+### 8. Dynamic Contextual Action Generator & Webhooks
+* **Personalized Outreach Briefs**: Synthesizes lead metadata, stage signals, and RAG citations to automatically compose targeted outreach titles and emails.
+* **HMAC-SHA256 Webhook Dispatcher**: Asynchronously dispatches cryptographically signed payloads to external webhooks (Salesforce, HubSpot, Zapier, Slack) upon manager approval.
+* **Dynamic Scoring Rules API**: Exposes `/api/decisions/config/rules` allowing RevOps teams to tune stage weights, strategy weightings, and churn penalties at runtime without code redeployments.
 
 ---
 
 ## 🗄️ Relational Database Schema
 
-PrioritiQ provides production-ready DDL (`backend/database/schema.sql`) for PostgreSQL and operates with an indexed SQLite WAL-mode engine (`data/prioritiq.db`):
+PrioritiQ provides production-ready PostgreSQL DDL (`backend/database/schema.sql`) and operates with an indexed SQLite WAL-mode engine (`data/prioritiq.db`):
 
-```
+```text
 ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
 │    COMPANIES    │       │      USERS      │       │    PRODUCTS     │
 ├─────────────────┤       ├─────────────────┤       ├─────────────────┤
@@ -224,7 +232,7 @@ PrioritiQ provides production-ready DDL (`backend/database/schema.sql`) for Post
             └───────────────────┘         └───────────────────┘
 ```
 
-Additional dedicated infrastructure tables:
+Infrastructure tables:
 * **`audit_ledger`**: Stores immutable events with `previous_hash` and `audit_hash` forming a verifiable SHA-256 hash chain.
 * **`scoring_rules`**: Stores active dynamic scoring policy configurations.
 * **`webhooks`**: Stores registered outbound endpoints with HMAC secrets and subscribed event types.
@@ -237,7 +245,7 @@ Additional dedicated infrastructure tables:
 * **Python**: 3.10+ (tested on Python 3.13)
 * **Node.js**: v18+ with `npm`
 
-### 1. Clone & Set Up Virtual Environment
+### 1. Clone & Set Up Environment
 ```bash
 git clone https://github.com/PanatiNitesh/PrioritiQ.git
 cd PrioritiQ
@@ -253,9 +261,8 @@ source venv/bin/activate
 pip install fastapi uvicorn pandas scikit-learn pydantic pytest
 ```
 
-### 2. Initialize & Seed Database
+### 2. Initialize Database & Seed Ground-Truth Data
 ```bash
-# Ingests ground-truth enterprise CRM records and builds WAL database
 python -m backend.database.seed
 ```
 
@@ -269,7 +276,7 @@ All 63 unit, integration, and benchmark tests pass in ~1 second.
 ```bash
 python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
 ```
-API documentation available at `http://127.0.0.1:8000/docs`.
+Interactive Swagger API documentation is available at `http://127.0.0.1:8000/docs`.
 
 ### 5. Launch Frontend Application
 ```bash
@@ -315,7 +322,7 @@ Open `http://localhost:5173` to access the PrioritiQ console.
 
 ## 🎨 UI & Design Philosophy
 
-PrioritiQ features a custom **Nordic Verdigris & Warm Sand** design system engineered for high-density executive focus:
+PrioritiQ features a custom **Nordic Verdigris & Warm Sand** design system engineered for executive focus:
 
 * **Background**: Warm Sand porcelain (`#F7F7F5`) with crisp sub-panels (`#FBFBF9`).
 * **Primary Accent**: Deep Nordic Verdigris (`#0F766E` / `#005F56`) delivering high contrast without corporate blue fatigue.
@@ -329,8 +336,8 @@ PrioritiQ features a custom **Nordic Verdigris & Warm Sand** design system engin
 PrioritiQ ships with a comprehensive test suite in [tests/](file:///d:/hackproject/New%20folder/PrioritiQ/tests):
 
 1. **`test_knapsack.py`**:
-   * Adherence to time budget ($T_{\text{allocated}} \le T_{\text{budget}}$ across $1.0\text{h}, 1.5\text{h}, 2.0\text{h}, 3.0\text{h}$).
-   * Adherence to cardinality limit bounds ($|S| \le \text{limit}$).
+   * Adherence to time budget across varying hour blocks.
+   * Adherence to cardinality limit bounds.
    * Objective value alignment with strategic weights.
 2. **`test_verification_agent.py`**:
    * Authentic primary-key match verification.
