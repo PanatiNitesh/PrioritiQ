@@ -5,7 +5,7 @@
 services:
   # Unified Production Web Service (FastAPI + React 18 SPA Console)
   - type: web
-    name: prioritiq
+    name: prioritiq-ai
     env: python
     region: oregon
     plan: free
