@@ -51,7 +51,8 @@ class IntentOrchestrator:
                 "bluestar": "LEAD-112"
             }
 
-    def parse(self, query_str: str) -> Dict[str, Any]:
+    def parse(self, query_str: Optional[str]) -> Dict[str, Any]:
+        query_str = query_str or ""
         q = query_str.lower().strip()
         confidence_factors = []
 
@@ -72,7 +73,7 @@ class IntentOrchestrator:
         if any(w in q for w in ["win rate", "probability", "highest probability", "safe revenue", "sure win"]):
             extracted_weight = "win_rate"
             confidence_factors.append(0.95)
-        elif any(w in q for w in ["deal value", "revenue", "highest value", "maximum value", "max value", "biggest deal", "contract size", "dollar"]):
+        elif any(w in q for w in ["deal value", "revenue", "highest value", "maximum value", "max value", "biggest deal", "contract size", "dollar", "$", "largest deal", "highest deal"]):
             extracted_weight = "deal_value"
             confidence_factors.append(0.95)
         elif any(w in q for w in ["velocity", "fastest", "quick", "close today", "closing this week", "speed", "fast"]):

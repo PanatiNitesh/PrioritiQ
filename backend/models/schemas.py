@@ -72,6 +72,7 @@ class DecisionResponse(BaseModel):
     evidence_graph: DecisionGraphData
     verification_report: Dict[str, Any]
     blast_radius: Optional[Dict[str, Any]] = None
+    monte_carlo_simulation: Optional[Dict[str, Any]] = None
     approval_status: str = "PENDING"
     approval_details: Optional[Dict[str, Any]] = None
 

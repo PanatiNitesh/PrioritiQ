@@ -17,6 +17,7 @@ interface Props {
   recommendation: LeadRecommendation;
   onAskWhyNot?: (leadId: string, companyName: string) => void;
   onSelectLead?: (lead: LeadRecommendation) => void;
+  onOpenOutreach?: (lead: LeadRecommendation) => void;
   isSelected?: boolean;
 }
 
@@ -24,6 +25,7 @@ export const RecommendationCard: React.FC<Props> = ({
   recommendation: r,
   onAskWhyNot,
   onSelectLead,
+  onOpenOutreach,
   isSelected
 }) => {
   const [expandedAction, setExpandedAction] = useState(false);
@@ -201,6 +203,17 @@ export const RecommendationCard: React.FC<Props> = ({
             >
               <HelpCircle size={12} className="text-slate-400" />
               Compare vs others
+            </button>
+          )}
+
+          {onOpenOutreach && (
+            <button
+              onClick={() => onOpenOutreach(r)}
+              className="px-3 py-1.5 rounded-lg bg-gradient-to-r from-teal-50 to-emerald-50 hover:from-teal-100 hover:to-emerald-100 text-teal-800 border border-teal-200 text-xs font-bold flex items-center gap-1.5 transition-all shadow-xs"
+              title="Launch Multi-Angle Executive Outreach Studio & Webhook Simulator"
+            >
+              <Sparkles size={12} className="text-teal-600 animate-pulse" />
+              <span>Outreach Studio</span>
             </button>
           )}
         </div>

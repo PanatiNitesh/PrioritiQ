@@ -6,6 +6,7 @@ from ..agents.analytics_agent import AnalyticsAgent
 from ..agents.retrieval_agent import RetrievalAgent
 from ..agents.verification_agent import VerificationAgent
 from ..analytics.blast_radius import BlastRadiusPredictor
+from ..analytics.simulation import MonteCarloPipelineSimulator
 from ..database.db import persist_decision, get_all_leads_with_companies
 from ..decision.webhooks import WebhookDispatcher
 from ..decision.evidence import construct_evidence_graph
@@ -21,6 +22,7 @@ analytics_agent = AnalyticsAgent()
 retrieval_agent = RetrievalAgent()
 verification_agent = VerificationAgent()
 blast_radius_predictor = BlastRadiusPredictor()
+monte_carlo_simulator = MonteCarloPipelineSimulator()
 
 def generate_action_payload(lead: Dict[str, Any], citations: Optional[List[GroundedCitation]] = None) -> Dict[str, Any]:
     """
@@ -196,7 +198,14 @@ def process_decision_query(
         time_budget_hours=time_budget
     )
 
-    # 6. Counterfactual Analysis ("Why not Lead X?")
+    # 6. Stochastic Monte Carlo Pipeline Risk & Revenue Simulation
+    monte_carlo = monte_carlo_simulator.simulate(
+        all_leads=all_leads,
+        recommended_leads=raw_leads,
+        trials=1000
+    )
+
+    # 7. Counterfactual Analysis ("Why not Lead X?")
     counterfactual = None
     target_ref = target_lead_id or intent.get("target_lead_ref")
     if target_ref:
@@ -294,6 +303,7 @@ def process_decision_query(
         evidence_graph=graph_data,
         verification_report=verification_report,
         blast_radius=blast_radius,
+        monte_carlo_simulation=monte_carlo,
         approval_status="PENDING"
     )
 

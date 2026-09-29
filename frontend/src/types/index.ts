@@ -135,6 +135,36 @@ export interface BlastRadiusReport {
   warnings: string[];
 }
 
+export interface MonteCarloSimulation {
+  simulation_trials: number;
+  market_volatility: number;
+  expected_revenue_optimized: number;
+  expected_revenue_baseline: number;
+  projected_revenue_lift: number;
+  lift_percentage: number;
+  probability_outperforming_baseline_pct: number;
+  prioritiq_schedule: {
+    p10_conservative: number;
+    p50_median: number;
+    p90_optimistic: number;
+    avg_deals_won: number;
+  };
+  legacy_crm_baseline: {
+    p10_conservative: number;
+    p50_median: number;
+    p90_optimistic: number;
+    avg_deals_won: number;
+  };
+  distribution_buckets: Array<{
+    range_min: number;
+    range_max: number;
+    label: string;
+    prioritiq_density: number;
+    baseline_density: number;
+  }>;
+  executive_summary: string;
+}
+
 export interface DecisionResponse {
   decision_id: string;
   query: string;
@@ -162,6 +192,7 @@ export interface DecisionResponse {
     verification_agent_summary: string;
   };
   blast_radius?: BlastRadiusReport;
+  monte_carlo_simulation?: MonteCarloSimulation;
   approval_status: string;
   approval_details?: Record<string, any>;
 }

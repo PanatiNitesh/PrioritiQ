@@ -22,7 +22,22 @@ def optimize_lead_prioritization(
         
     leads_list = df.to_dict(orient="records")
     
-    if not time_budget_hours:
+    if time_budget_hours is not None and time_budget_hours <= 0:
+        return [], {
+            "constrained": True,
+            "time_budget_mins": 0,
+            "allocated_mins": 0,
+            "slack_mins": 0,
+            "total_deal_value": 0.0,
+            "priority_weight": priority_weight,
+            "leads_evaluated": len(leads_list),
+            "leads_selected": 0,
+            "excluded_count": len(leads_list),
+            "cardinality_limit": limit,
+            "constraint_explanation": "Zero or non-positive time budget specified (0 mins). Zero accounts scheduled."
+        }, leads_list
+
+    if time_budget_hours is None:
         # Standard unconstrained ranking bounded by limit
         selected = leads_list[:limit]
         excluded = leads_list[limit:]
@@ -43,7 +58,7 @@ def optimize_lead_prioritization(
         return selected, sim_state, excluded
 
     # 2D Bounded Knapsack DP: Capacity (time) AND Cardinality (limit)
-    max_mins = int(time_budget_hours * 60)
+    max_mins = max(0, int(time_budget_hours * 60))
     max_items = min(limit, len(leads_list))
     
     # Items: (lead, effort_mins, strategic_value)

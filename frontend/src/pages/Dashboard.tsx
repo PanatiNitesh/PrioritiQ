@@ -5,6 +5,8 @@ import { RecommendationCard } from '../components/RecommendationCard/Recommendat
 import { DecisionGraphViewer } from '../components/DecisionGraph/DecisionGraphViewer';
 import { EvidencePanel } from '../components/EvidencePanel/EvidencePanel';
 import { ApprovalPanel } from '../components/ApprovalPanel/ApprovalPanel';
+import { MonteCarloViewer } from '../components/MonteCarlo/MonteCarloViewer';
+import { OutreachModal } from '../components/OutreachStudio/OutreachModal';
 import {
   Send,
   Sliders,
@@ -19,7 +21,10 @@ import {
   ShieldCheck,
   CheckCircle2,
   AlertTriangle,
-  Users
+  Users,
+  Download,
+  Copy,
+  Check
 } from 'lucide-react';
 
 interface Props {
@@ -32,6 +37,8 @@ export const Dashboard: React.FC<Props> = ({ onOpenDataSources, onNavigateDetail
   const [loading, setLoading] = useState(false);
   const [decision, setDecision] = useState<DecisionResponse | null>(null);
   const [selectedLead, setSelectedLead] = useState<LeadRecommendation | null>(null);
+  const [copiedBrief, setCopiedBrief] = useState(false);
+  const [outreachLead, setOutreachLead] = useState<LeadRecommendation | null>(null);
 
   // Simulation controls state
   const [timeBudget, setTimeBudget] = useState<number | undefined>(undefined);
@@ -94,6 +101,39 @@ export const Dashboard: React.FC<Props> = ({ onOpenDataSources, onNavigateDetail
     const q = `Why not ${companyName}?`;
     setQueryInput(q);
     executeQuery(q, timeBudget, priorityMode, leadId);
+  };
+
+  const exportDecisionJson = () => {
+    if (!decision) return;
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(decision, null, 2));
+    const dlAnchor = document.createElement('a');
+    dlAnchor.setAttribute("href", dataStr);
+    dlAnchor.setAttribute("download", `prioritiq_decision_${decision.decision_id}.json`);
+    dlAnchor.click();
+  };
+
+  const copyExecutiveMarkdownBrief = () => {
+    if (!decision) return;
+    let brief = `# PrioritiQ Executive Sales Decision Brief\n\n`;
+    brief += `**Decision ID**: ${decision.decision_id}\n`;
+    brief += `**Timestamp**: ${new Date(decision.timestamp).toLocaleString()}\n`;
+    brief += `**Query**: ${decision.query}\n`;
+    brief += `**Status**: ${decision.approval_status}\n\n`;
+    brief += `## Prioritized Accounts\n\n`;
+    decision.recommendations.forEach((rec, idx) => {
+      brief += `${idx + 1}. **${rec.lead_name}** (${rec.company_name}) - Deal: $${rec.deal_size.toLocaleString()} | Score: ${rec.composite_score}/100 | Rep: ${rec.assigned_rep}\n`;
+      brief += `   - Action: ${rec.suggested_action?.title || 'Reach out'}\n`;
+      brief += `   - Evidence: "${rec.grounded_evidence?.[0]?.quote || 'Verified in CRM'}"\n\n`;
+    });
+    if (decision.blast_radius) {
+      brief += `## Blast Radius Risk Assessment\n\n`;
+      brief += `- Risk Level: ${decision.blast_radius.risk_level} (${decision.blast_radius.collateral_damage_score}/100)\n`;
+      brief += `- Excluded Pipeline: $${(decision.blast_radius.excluded_pipeline_value || 0).toLocaleString()} across ${decision.blast_radius.excluded_accounts_count} accounts\n`;
+      brief += `- Rep Skew: ±${decision.blast_radius.rep_skew_std_dev_mins} mins\n`;
+    }
+    navigator.clipboard.writeText(brief);
+    setCopiedBrief(true);
+    setTimeout(() => setCopiedBrief(false), 2500);
   };
 
   return (
@@ -421,6 +461,14 @@ export const Dashboard: React.FC<Props> = ({ onOpenDataSources, onNavigateDetail
         </div>
       )}
 
+      {/* Feature 1: Stochastic Monte Carlo Pipeline Risk & Revenue Simulation */}
+      {decision?.monte_carlo_simulation && (
+        <MonteCarloViewer
+          simulationData={decision.monte_carlo_simulation}
+          priorityWeight={priorityMode}
+        />
+      )}
+
       {/* Interactive Evidence Graph View */}
       {decision?.evidence_graph && (
         <DecisionGraphViewer
@@ -438,7 +486,7 @@ export const Dashboard: React.FC<Props> = ({ onOpenDataSources, onNavigateDetail
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left 2 Cols: Ranked Recommendations List */}
         <div className="lg:col-span-2 space-y-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-2.5">
               <h2 className="text-base font-bold text-slate-900 tracking-tight">
                 Prioritized Sales Recommendations
@@ -448,12 +496,32 @@ export const Dashboard: React.FC<Props> = ({ onOpenDataSources, onNavigateDetail
               </span>
             </div>
 
-            <button
-              onClick={() => decision && onNavigateDetail(decision.decision_id)}
-              className="text-xs text-teal-700 hover:text-teal-900 font-bold flex items-center gap-1"
-            >
-              Full Verification Dossier <ArrowRight size={13} />
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={copyExecutiveMarkdownBrief}
+                title="Copy Executive Markdown Brief"
+                className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1 transition-all"
+              >
+                {copiedBrief ? <Check size={12} className="text-emerald-600" /> : <Copy size={12} className="text-slate-500" />}
+                <span>{copiedBrief ? 'Copied Brief!' : 'Copy Brief'}</span>
+              </button>
+
+              <button
+                onClick={exportDecisionJson}
+                title="Download JSON Decision Dossier"
+                className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1 transition-all"
+              >
+                <Download size={12} className="text-slate-500" />
+                <span>JSON</span>
+              </button>
+
+              <button
+                onClick={() => decision && onNavigateDetail(decision.decision_id)}
+                className="text-xs text-teal-700 hover:text-teal-900 font-bold flex items-center gap-1 ml-1"
+              >
+                Verification Dossier <ArrowRight size={13} />
+              </button>
+            </div>
           </div>
 
           <div className="space-y-3.5">
@@ -464,6 +532,7 @@ export const Dashboard: React.FC<Props> = ({ onOpenDataSources, onNavigateDetail
                 isSelected={selectedLead?.lead_id === r.lead_id}
                 onSelectLead={(lead) => setSelectedLead(lead)}
                 onAskWhyNot={(lid, cName) => handleAskWhyNot(lid, cName)}
+                onOpenOutreach={(lead) => setOutreachLead(lead)}
               />
             ))}
           </div>
@@ -518,6 +587,15 @@ export const Dashboard: React.FC<Props> = ({ onOpenDataSources, onNavigateDetail
           decisionId={decision.decision_id}
           approvalStatus={decision.approval_status}
           selectedLeadCount={decision.recommendations.length}
+        />
+      )}
+
+      {/* Feature 3: Executive Outreach Studio & Webhook Simulator Modal */}
+      {outreachLead && (
+        <OutreachModal
+          isOpen={!!outreachLead}
+          lead={outreachLead}
+          onClose={() => setOutreachLead(null)}
         />
       )}
     </div>

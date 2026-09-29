@@ -47,6 +47,14 @@ def update_scoring_rules(new_rules: Dict[str, Any]) -> Dict[str, Any]:
     conn = get_connection()
     cur = conn.cursor()
     merged = {**DEFAULT_SCORING_RULES, **new_rules}
+    if "strategy_weights" in new_rules and isinstance(new_rules["strategy_weights"], dict):
+        merged_strat = {**DEFAULT_SCORING_RULES.get("strategy_weights", {})}
+        for k, v in new_rules["strategy_weights"].items():
+            if k in merged_strat and isinstance(merged_strat[k], dict) and isinstance(v, dict):
+                merged_strat[k] = {**merged_strat[k], **v}
+            else:
+                merged_strat[k] = v
+        merged["strategy_weights"] = merged_strat
     cur.execute("INSERT OR REPLACE INTO scoring_rules (id, rules_json) VALUES ('active', ?)", (json.dumps(merged),))
     conn.commit()
     conn.close()

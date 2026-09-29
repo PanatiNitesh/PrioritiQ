@@ -1,13 +1,23 @@
 {
-  "name": "decisiongraph",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "prioritiq",
+  "version": "2.0.0",
+  "description": "Enterprise Evidence-Grounded AI Sales Decision Engine",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "dev:backend": "python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload",
+    "test:backend": "pytest tests -v",
+    "test": "pytest tests -v",
+    "seed": "python -m backend.database.seed"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "keywords": [
+    "sales-decision-intelligence",
+    "prioritization",
+    "rag",
+    "knapsack-optimization",
+    "blast-radius",
+    "cryptographic-audit"
+  ],
+  "author": "PrioritiQ Core Team",
+  "license": "MIT"
 }

@@ -164,9 +164,10 @@ async def get_scoring_rules_config():
     Returns the active enterprise scoring policy and weight configuration.
     """
     rules = load_scoring_rules()
-    return rules.dict()
+    return rules.model_dump()
 
 @router.post("/config/rules", response_model=Dict[str, Any])
+@router.put("/config/rules", response_model=Dict[str, Any])
 async def update_scoring_rules_config(updated_rules: Dict[str, Any]):
     """
     Dynamically tunes scoring weights, churn penalties, and stage multipliers.
@@ -174,7 +175,7 @@ async def update_scoring_rules_config(updated_rules: Dict[str, Any]):
     try:
         validated = ScoringRulesConfig(**updated_rules)
         save_scoring_rules(validated)
-        return {"status": "SUCCESS", "message": "Scoring rules updated successfully.", "rules": validated.dict()}
+        return {"status": "SUCCESS", "message": "Scoring rules updated successfully.", "rules": validated.model_dump()}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
@@ -190,3 +191,110 @@ async def register_webhook_endpoint(data: Dict[str, Any]):
     event_types = data.get("event_types", ["decision.approved", "decision.created"])
     secret = data.get("secret")
     return WebhookDispatcher.register_webhook(url=url, event_types=event_types, secret=secret)
+
+# ==============================================================================
+# ADVANCED ANALYTICS: MONTE CARLO & REVOPS PREVIEW ENDPOINTS
+# ==============================================================================
+
+@router.post("/simulate", response_model=Dict[str, Any])
+async def run_custom_monte_carlo(req: Dict[str, Any]):
+    """
+    On-demand stochastic Monte Carlo simulation with customizable volatility & trials.
+    """
+    from ..analytics.simulation import MonteCarloPipelineSimulator
+    from ..database.db import get_all_leads_with_companies
+    from ..analytics.lead_scoring import compute_deterministic_scores
+
+    trials = int(req.get("trials", 1000))
+    volatility = float(req.get("market_volatility", 0.12))
+    efficiency = float(req.get("execution_efficiency", 1.0))
+    time_budget = req.get("time_budget_hours")
+
+    all_leads = get_all_leads_with_companies()
+    scores_df = compute_deterministic_scores(priority_weight=req.get("priority_weight", "balanced"))
+    recommended = scores_df.to_dict(orient="records")[:req.get("limit", 5)]
+
+    simulator = MonteCarloPipelineSimulator(random_seed=req.get("seed", 42))
+    result = simulator.simulate(
+        all_leads=all_leads,
+        recommended_leads=recommended,
+        trials=trials,
+        market_volatility=volatility,
+        execution_efficiency=efficiency
+    )
+    return result
+
+@router.post("/config/rules/preview", response_model=List[Dict[str, Any]])
+async def preview_scoring_rules_impact(prospective_rules: Dict[str, Any]):
+    """
+    Simulates real-time pipeline ranking differentials when adjusting scoring weights.
+    Returns before-and-after lead scores and rank shifts.
+    """
+    import numpy as np
+    import pandas as pd
+    from ..analytics.lead_scoring import load_data
+    from ..database.db import get_max_dataset_timestamp
+
+    df = load_data()
+    if df.empty:
+        return []
+
+    # Current baseline scores
+    from ..analytics.lead_scoring import compute_deterministic_scores
+    current_df = compute_deterministic_scores(priority_weight="balanced")
+    current_scores = {r["lead_id"]: r["final_score"] for r in current_df.to_dict(orient="records")}
+    current_ranks = {r["lead_id"]: idx + 1 for idx, r in enumerate(current_df.to_dict(orient="records"))}
+
+    # Calculate prospective scores
+    stage_weights = prospective_rules.get("stage_weights", {})
+    strategy_weights = prospective_rules.get("strategy_weights", {}).get("balanced", {})
+    churn_penalties = prospective_rules.get("churn_penalties", {})
+    half_life_days = prospective_rules.get("recency_decay_half_life_days", 4.0)
+
+    now_ref = get_max_dataset_timestamp()
+    df['last_act_dt'] = pd.to_datetime(df['last_activity_date'], errors='coerce').fillna(now_ref)
+    df['days_since_act'] = (now_ref - df['last_act_dt']).dt.total_seconds() / 86400.0
+    df['days_since_act'] = df['days_since_act'].clip(lower=0.0)
+    df['recency_multiplier'] = np.exp(-df['days_since_act'] / half_life_days)
+    df['stage_score'] = df['stage'].map(stage_weights).fillna(0.35)
+
+    df['norm_deal'] = np.log1p(df['deal_size']) / np.log1p(1500000.0)
+    df['norm_intent'] = df['intent_score'] / 100.0
+    df['norm_icp'] = df['icp_fit'] / 100.0
+
+    w_deal = strategy_weights.get("deal_size", 0.40)
+    w_intent = strategy_weights.get("intent_score", 0.25)
+    w_icp = strategy_weights.get("icp_fit", 0.20)
+    w_stage = strategy_weights.get("stage_weight", 0.15)
+
+    df['raw_score'] = (
+        (df['norm_deal'] * w_deal) +
+        (df['norm_intent'] * w_intent) +
+        (df['norm_icp'] * w_icp) +
+        (df['stage_score'] * w_stage)
+    ) * df['recency_multiplier']
+
+    df['churn_penalty'] = df['churn_risk'].map(churn_penalties).fillna(0.0)
+    df['new_final_score'] = np.clip((df['raw_score'] - df['churn_penalty']) * 100.0, 0.0, 100.0).round(1)
+
+    df = df.sort_values(by="new_final_score", ascending=False)
+    diff_records = []
+    for new_rank, (_, row) in enumerate(df.iterrows(), start=1):
+        lid = row["lead_id"]
+        old_score = current_scores.get(lid, 0.0)
+        old_rank = current_ranks.get(lid, 99)
+        new_score = row["new_final_score"]
+        diff_records.append({
+            "lead_id": lid,
+            "lead_name": row.get("lead_name") or row.get("name"),
+            "company_name": row.get("company_name") or row.get("name_y") or row.get("company_id"),
+            "stage": row.get("stage"),
+            "deal_size": float(row.get("deal_size", 0)),
+            "old_score": round(old_score, 1),
+            "new_score": round(new_score, 1),
+            "score_delta": round(new_score - old_score, 1),
+            "old_rank": old_rank,
+            "new_rank": new_rank,
+            "rank_shift": old_rank - new_rank  # positive means improved rank
+        })
+    return diff_records

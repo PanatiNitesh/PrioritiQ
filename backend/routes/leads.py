@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from typing import Dict, Any, List, Optional
 import os
 import pandas as pd
-from ..analytics.lead_scoring import compute_deterministic_scores, load_data
+from ..analytics.lead_scoring import compute_deterministic_scores
 from ..analytics.metrics import get_lead_delta_since_yesterday
 from ..rag.retrieval import get_evidence_for_lead
 
@@ -24,22 +24,22 @@ async def list_leads(stage: Optional[str] = None, rep: Optional[str] = None):
         l['delta_info'] = get_lead_delta_since_yesterday(l['lead_id'])
     return leads
 
+from ..database.db import get_lead_by_id, get_activities_for_lead
+
 @router.get("/{lead_id}", response_model=Dict[str, Any])
 async def get_lead_detail(lead_id: str):
-    merged_df, activities_df = load_data()
-    lead_row = merged_df[merged_df['lead_id'] == lead_id]
-    if lead_row.empty:
-        raise HTTPException(status_code=404, detail="Lead not found")
+    lead_data = get_lead_by_id(lead_id)
+    if not lead_data:
+        raise HTTPException(status_code=404, detail=f"Lead with ID '{lead_id}' not found.")
         
-    lead_data = lead_row.iloc[0].to_dict()
     lead_data['delta_info'] = get_lead_delta_since_yesterday(lead_id)
     
     # Activities
-    lead_acts = activities_df[activities_df['lead_id'] == lead_id].to_dict(orient="records")
+    lead_acts = get_activities_for_lead(lead_id)
     lead_data['activities'] = lead_acts
     
     # Grounded Citations
     citations = get_evidence_for_lead(lead_id)
-    lead_data['grounded_citations'] = [c.dict() for c in citations]
+    lead_data['grounded_citations'] = [c.model_dump() for c in citations]
     
     return lead_data

@@ -1,6 +1,27 @@
 import { DecisionResponse, AuditLogEntry } from '../types';
 
-const API_BASE = 'http://127.0.0.1:8000/api';
+const isLocalDevVite = typeof window !== 'undefined' && window.location.hostname === 'localhost' && window.location.port === '5173';
+const DEFAULT_API_BASE = isLocalDevVite ? 'http://127.0.0.1:8000/api' : '/api';
+const API_BASE = (import.meta as any).env?.VITE_API_BASE || DEFAULT_API_BASE;
+
+async function handleResponse(res: Response, defaultMessage: string) {
+  if (!res.ok) {
+    let msg = `${defaultMessage} (${res.status} ${res.statusText})`;
+    try {
+      const err = await res.json();
+      if (err?.detail) msg = typeof err.detail === 'string' ? err.detail : JSON.stringify(err.detail);
+    } catch (_) {}
+    throw new Error(msg);
+  }
+  return res.json();
+}
+
+export async function fetchHealthCheck() {
+  const rootBase = API_BASE.endsWith('/api') ? API_BASE.slice(0, -4) : API_BASE;
+  const url = rootBase ? `${rootBase}/health` : '/health';
+  const res = await fetch(url);
+  return handleResponse(res, 'Health check failed');
+}
 
 export async function queryDecisionEngine(
   query: string,
@@ -18,18 +39,12 @@ export async function queryDecisionEngine(
       target_lead_id: targetLeadId
     })
   });
-  if (!res.ok) {
-    throw new Error(`API error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, 'Failed to process decision query');
 }
 
 export async function fetchDecisionById(decisionId: string): Promise<DecisionResponse> {
   const res = await fetch(`${API_BASE}/decisions/${encodeURIComponent(decisionId)}`);
-  if (!res.ok) {
-    throw new Error(`Decision ${decisionId} fetch error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, `Failed to fetch decision ${decisionId}`);
 }
 
 export async function approveDecision(
@@ -50,34 +65,22 @@ export async function approveDecision(
       generate_emails: true
     })
   });
-  if (!res.ok) {
-    throw new Error(`Approval error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, 'Failed to submit approval');
 }
 
 export async function fetchDecisionHistory(): Promise<AuditLogEntry[]> {
   const res = await fetch(`${API_BASE}/decisions/history`);
-  if (!res.ok) {
-    throw new Error(`History error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, 'Failed to fetch decision history');
 }
 
 export async function verifyAuditChain() {
   const res = await fetch(`${API_BASE}/decisions/audit/verify`);
-  if (!res.ok) {
-    throw new Error(`Audit verification error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, 'Failed to verify audit ledger');
 }
 
 export async function fetchScoringRules() {
   const res = await fetch(`${API_BASE}/decisions/config/rules`);
-  if (!res.ok) {
-    throw new Error(`Rules error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, 'Failed to fetch scoring rules');
 }
 
 export async function updateScoringRules(rules: any) {
@@ -86,41 +89,49 @@ export async function updateScoringRules(rules: any) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(rules)
   });
-  if (!res.ok) {
-    throw new Error(`Update rules error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, 'Failed to update scoring rules');
 }
 
 export async function fetchLeads(stage?: string) {
   const url = stage ? `${API_BASE}/leads?stage=${encodeURIComponent(stage)}` : `${API_BASE}/leads`;
   const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`Leads error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, 'Failed to fetch leads');
 }
 
 export async function fetchLeadDetail(leadId: string) {
   const res = await fetch(`${API_BASE}/leads/${leadId}`);
-  if (!res.ok) {
-    throw new Error(`Lead detail error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, `Failed to fetch lead ${leadId}`);
 }
 
 export async function fetchDataSourcesSummary() {
   const res = await fetch(`${API_BASE}/sources/summary`);
-  if (!res.ok) {
-    throw new Error(`Sources error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, 'Failed to fetch data sources summary');
 }
 
 export async function fetchAllNotes() {
   const res = await fetch(`${API_BASE}/sources/notes`);
-  if (!res.ok) {
-    throw new Error(`Notes error: ${res.statusText}`);
-  }
-  return res.json();
+  return handleResponse(res, 'Failed to fetch notes');
+}
+
+export async function runMonteCarloSimulation(params: {
+  trials?: number;
+  market_volatility?: number;
+  priority_weight?: string;
+  execution_efficiency?: number;
+}) {
+  const res = await fetch(`${API_BASE}/decisions/simulate`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(params)
+  });
+  return handleResponse(res, 'Failed to run Monte Carlo simulation');
+}
+
+export async function previewScoringRulesImpact(prospectiveRules: any) {
+  const res = await fetch(`${API_BASE}/decisions/config/rules/preview`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(prospectiveRules)
+  });
+  return handleResponse(res, 'Failed to preview scoring policy impact');
 }
