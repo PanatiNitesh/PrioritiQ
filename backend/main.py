@@ -35,7 +35,7 @@ if os.path.exists(DIST_DIR):
     if os.path.exists(assets_dir):
         app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def read_root(request: Request):
     accept = request.headers.get("accept", "")
     index_file = os.path.join(DIST_DIR, "index.html")
@@ -49,7 +49,7 @@ def read_root(request: Request):
         "architecture": "Deterministic Multi-Factor Analytics + Hybrid Semantic RAG + 2D Knapsack DP + Cryptographic SHA-256 Ledger + Human Governance"
     }
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def health_check():
     """
     Comprehensive system health diagnostics:
@@ -107,7 +107,7 @@ def health_check():
         }
 
 if os.path.exists(DIST_DIR):
-    @app.get("/{full_path:path}")
+    @app.api_route("/{full_path:path}", methods=["GET", "HEAD"])
     async def serve_spa(full_path: str):
         # Allow API routes to be handled or return 404
         if full_path.startswith("api/"):
