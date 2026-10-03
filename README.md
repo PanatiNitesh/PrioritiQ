@@ -445,6 +445,20 @@ PrioritiQ is configured for seamless full-stack deployment on **[Render](https:/
 
 ---
 
+## 🤖 Disclosure of AI Tools Used
+
+In adherence to hackathon integrity and transparency standards, the following AI tools and technologies were utilized during the design, architecture, and engineering of **PrioritiQ**:
+
+* **AI Agentic Coding & IDE Frameworks:**
+  * **Antigravity Agentic IDE:** Leveraged for multi-agent architecture scaffolding, iterative debugging, test generation (88/88 test cases), and full-stack integration between FastAPI and React 18.
+* **Large Language Models & Semantic Retrieval:**
+  * **Google Gemini & Anthropic Claude (via Agentic IDEs):** Used for architectural planning, contextual executive outreach prompt templates, and schema optimization.
+  * **HuggingFace `sentence-transformers` (MiniLM-L6-v2) & Lexical BM25:** Implemented directly within the application engine for local semantic search and line-level hybrid citation retrieval.
+* **Deterministic Guardrails & Human Authorship:**
+  * All core mathematical algorithms (**2D Bounded Knapsack Dynamic Programming solver**, **Monte Carlo 1,000-trial stochastic risk engine**, **Primary-Key verification logic**, and **SHA-256 cryptographic hash-chain ledger**) are 100% deterministically engineered and verified with automated unit and regression suites to prevent LLM hallucinations.
+
+---
+
 ## 📄 License & Intellectual Property
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details. Built for enterprise commercial decision intelligence by [PanatiNitesh](https://github.com/PanatiNitesh).

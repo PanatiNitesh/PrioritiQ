@@ -50,6 +50,7 @@ def read_root(request: Request):
     }
 
 @app.api_route("/health", methods=["GET", "HEAD"])
+@app.api_route("/health/", methods=["GET", "HEAD"])
 def health_check():
     """
     Comprehensive system health diagnostics:
